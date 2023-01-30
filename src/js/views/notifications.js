@@ -43,6 +43,8 @@ export function notify({ msg = 'Info message', className = 'alert-info', timeout
     const container = getContainer();
 
     container.insertAdjacentHTML('beforeend', template);
+
+    setTimeout(() => closeNotify(index), timeout);
 }
 
 export function closeNotify(index) {

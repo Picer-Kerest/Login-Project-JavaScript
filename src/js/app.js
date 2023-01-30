@@ -42,8 +42,9 @@ async function onSubmit() {
     try {
         await login(inputEmail.value, inputPassword.value);
         form.reset();
+        notify({msg: 'Login Success', className: 'alert-success'})
     //    Для сбрасывания формы после регистрации
     } catch (err) {
-
+        notify({msg: 'Login Failed', className: 'alert-danger'})
     }
 }
